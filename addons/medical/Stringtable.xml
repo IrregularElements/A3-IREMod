@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler - 2014-12-12 -->
+<Project name="ire_mod">
+	<Package name="medical">
+		<Key ID="STR_ire_mod_medical_settingsSubcategory">
+			<English>ACE Medical Tweaks</English>
+			<Russian>Медицина ACE</Russian>
+		</Key>
+	</Package>
+</Project>

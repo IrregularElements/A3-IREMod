@@ -1,0 +1,1 @@
+#define IRE_MEDICAL_IDC_BASE    20000

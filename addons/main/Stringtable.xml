@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler - 2014-12-12 -->
+<Project name="ire_mod">
+	<Package name="main">
+		<Key ID="STR_ire_mod_main_settingsCategory">
+			<English>IRE Mod</English>
+		</Key>
+		<Key ID="STR_ire_mod_main_URL">
+			<English>https://github.com/IrregularElements/A3-IREMod</English>
+		</Key>
+		<Key ID="STR_ire_mod_main_tsar_bimbo">
+			<English>tsar bimbo &lt;interruptinuse@gmail.com&gt;</English>
+		</Key>
+	</Package>
+</Project>

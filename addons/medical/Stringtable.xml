@@ -6,5 +6,33 @@
 			<English>ACE Medical Tweaks</English>
 			<Russian>Медицина ACE</Russian>
 		</Key>
+		<Key ID="STR_ire_mod_medical_settingWoundPatchingEnabled_DisplayName">
+			<English>Wound patching</English>
+			<Russian>Штопка ран</Russian>
+		</Key>
+		<Key ID="STR_ire_mod_medical_settingWoundPatchingEnabled_Description">
+			<English>When both medic and patient are out of bandages, enables patching up wounds; this is much slower but does not consume bandages.</English>
+			<Russian>Когда у медика и пациента закончились бинты, позволяет штопать ранения; это значительно медленнее, но не требует бинтов.</Russian>
+		</Key>
+		<Key ID="STR_ire_mod_medical_settingWoundPatchingTimeMultiplier_DisplayName">
+			<English>Wound patching time multiplier</English>
+			<Russian>Множитель времени для штопки</Russian>
+		</Key>
+		<Key ID="STR_ire_mod_medical_settingWoundPatchingTimeMultiplier_Description">
+			<English>Time wound patching takes up, in form of a factor relative to bandaging.</English>
+			<Russian>Время, требуемое на штопку раны, в виде множителя относительно забинтовывания.</Russian>
+		</Key>
+		<Key ID="STR_ire_mod_medical_actionWoundPatching">
+			<English>Patch</English>
+			<Russian>Штопать</Russian>
+		</Key>
+		<Key ID="STR_ire_mod_medical_actionWoundPatchingProgress">
+			<English>Patching...</English>
+			<Russian>Заштопывание...</Russian>
+		</Key>
+		<Key ID="STR_ire_mod_medical_activityPatchedPatient">
+			<English>%1 has patched patient</English>
+			<Russian>%1 заштопал пациента</Russian>
+		</Key>
 	</Package>
 </Project>

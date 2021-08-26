@@ -34,5 +34,25 @@
 			<English>%1 has patched patient</English>
 			<Russian>%1 заштопал пациента</Russian>
 		</Key>
+		<Key ID="STR_ire_mod_medical_settingEpiBonusEnabled_DisplayName">
+			<English>Epinephrine bonus</English>
+			<Russian>Адреналиновый бонус</Russian>
+		</Key>
+		<Key ID="STR_ire_mod_medical_settingEpiBonusEnabled_Description">
+			<English>The patient will temporarily wake up after an epinephrine injection.</English>
+			<Russian>Пациент временно придёт в себя после инъекции адреналина.</Russian>
+		</Key>
+		<Key ID="STR_ire_mod_medical_settingEpiBonusDuration_DisplayName">
+			<English>Epinephrine bonus duration</English>
+			<Russian>Длительность адреналинового бонуса</Russian>
+		</Key>
+		<Key ID="STR_ire_mod_medical_settingEpiBonusCooldown_DisplayName">
+			<English>Epinephrine bonus cooldown</English>
+			<Russian>Время отдыха после адреналинового бонуса</Russian>
+		</Key>
+		<Key ID="STR_ire_mod_medical_settingEpiBonusCooldown_Description">
+			<English>Minimum time in seconds between injections for another epinephrine bonus to work.</English>
+			<Russian>Минимальное время в секундах между инъекциями, которое требуется для успешного повторного адреналинового бонуса.</Russian>
+		</Key>
 	</Package>
 </Project>

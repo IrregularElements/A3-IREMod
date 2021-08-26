@@ -1,8 +1,12 @@
 name = "IRE Mod";
+picture = "logo_ire_mod_ca.paa";
 actionName = "GitHub";
 action = "https://github.com/IrregularElements/A3-IREMod";
 description = "IRE Mod - Version 0.1.0";
+logo = "logo_ire_mod_ca.paa";
+logoOver = "logo_ire_mod_ca.paa";
 tooltip = "IRE Mod";
 tooltipOwned = "IRE Mod Owned";
 overview = "A collection of Arma 3 gameplay modifications.";
 author = "tsar_bimbo";
+overviewPicture = "logo_ire_mod_ca.paa";

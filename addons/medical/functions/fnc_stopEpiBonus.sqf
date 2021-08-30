@@ -36,3 +36,10 @@ if(_wasUnconscious && _isInCriticalCondition) then {
 		[_patient, ace_medical_STATE_MACHINE, "Unconscious", "CardiacArrest"] call CBA_statemachine_fnc_manualTransition;
 	};
 };
+
+private _antiLimpScriptHandle = _patient getVariable [VAR_ANTILIMP_SCRIPT_HND, nil];
+if(!(scriptDone _antiLimpScriptHandle)) then {
+	terminate _antiLimpScriptHandle;
+};
+_patient setVariable [VAR_ANTILIMP_SCRIPT_HND, nil, true];
+_patient call ace_medical_engine_fnc_updateDamageEffects;

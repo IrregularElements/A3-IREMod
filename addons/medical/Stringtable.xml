@@ -39,8 +39,8 @@
 			<Russian>Адреналиновый бонус</Russian>
 		</Key>
 		<Key ID="STR_ire_mod_medical_settingEpiBonusEnabled_Description">
-			<English>The patient will temporarily wake up after an epinephrine injection.</English>
-			<Russian>Пациент временно придёт в себя после инъекции адреналина.</Russian>
+			<English>The patient will temporarily wake up and stop limping after an epinephrine injection.</English>
+			<Russian>Пациент временно придёт в себя и перестанет хромать после инъекции адреналина.</Russian>
 		</Key>
 		<Key ID="STR_ire_mod_medical_settingEpiBonusDuration_DisplayName">
 			<English>Epinephrine bonus duration</English>

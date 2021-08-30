@@ -19,7 +19,7 @@ Returns:
     Boolean - whether the bonus was successfully applied
 ---------------------------------------------------------------------------- */
 
-params ["_patient"];
+params ["_patient", ["_duration", GVAR(epiBonusDuration)]];
 
 TRACE_1("startEpiBonus", _patient);
 
@@ -53,3 +53,18 @@ if(_isUnconscious) then {
 	[_patient, false] call ace_medical_status_fnc_setUnconsciousState;
 	["ace_medical_wakeUp", _patient] call CBA_fnc_localEvent;
 };
+
+private _stopTime = CBA_missionTime + _duration;
+
+private _antiLimpScriptHandle = [_patient, _stopTime] spawn {
+	params ["_patient", "_stopTime"];
+
+	waitUntil {
+		_patient setHitPointDamage ["HitHands", 0];
+		_patient setHitPointDamage ["HitLegs", 0];
+		sleep 1;
+		CBA_missionTime > _stopTime;
+	};
+};
+
+_patient setVariable [VAR_ANTILIMP_SCRIPT_HND, _antiLimpScriptHandle, true];

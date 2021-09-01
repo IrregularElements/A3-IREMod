@@ -2,5 +2,33 @@
 <!-- Edited with tabler - 2014-12-12 -->
 <Project name="ire_mod">
 	<Package name="ai">
+		<Key ID="STR_ire_mod_ai_settingsSubcategory">
+			<English>AI Tweaks</English>
+			<Russian>Настройки ИИ</Russian>
+		</Key>
+		<Key ID="STR_ire_mod_ai_cargoUnloadActionsEnabled_DisplayName">
+			<English>Cargo unload actions</English>
+			<Russian>Приказы выгрузить карго</Russian>
+		</Key>
+		<Key ID="STR_ire_mod_ai_cargoUnloadActionsEnabled_Description">
+			<English>Adds actions to commanded AI (available in orders menu) to unload ACE cargo from nearby vehicles.</English>
+			<Russian>Добавляет ИИ под командованием игрока приказы выгрузить карго из находящегося рядом транспорта. </Russian>
+		</Key>
+		<Key ID="STR_ire_mod_ai_cargoActionDoUnload">
+			<English>Unload %1 from %2</English>
+			<Russian>Выгрузить %1 из %2</Russian>
+		</Key>
+		<Key ID="STR_ire_mod_ai_cargoActionTooFarAway">
+			<English>Could not unload %1 from %2, too far away!</English>
+			<Russian>Не могу выгрузить %1 из %2, слишком далеко!</Russian>
+		</Key>
+		<Key ID="STR_ire_mod_ai_cargoActionUnloadFailed">
+			<English>Could not unload %1 from %2!</English>
+			<Russian>Не могу выгрузить %1 из %2!</Russian>
+		</Key>
+		<Key ID="STR_ire_mod_ai_cargoActionComplete">
+			<English>Successfully unloaded %1 from %2!</English>
+			<Russian>Удалось выгрузить %1 из %2!</Russian>
+		</Key>
 	</Package>
 </Project>

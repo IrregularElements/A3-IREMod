@@ -2,8 +2,6 @@
 
 params ["_unit", ["_distance", 50]];
 
-TRACE_2("refresh cargo actions",_unit,_distance);
-
 if(isNull _unit) exitWith {
 	TRACE_1("Unit is nil", _unit);
 	false;
@@ -25,8 +23,6 @@ private _newActionCount = 0;
 		private _item = _x;
 		private _vehName = [_vehicle] call ire_mod_main_fnc_getDisplayName;
 		private _itemName = [_item] call ire_mod_main_fnc_getDisplayName;
-
-		TRACE_2("adding action",_item,_vehicle);
 
 		private _actionId = _unit addAction [
 			(format [LLSTRING(cargoActionDoUnload), _itemName, _vehName]),

@@ -4,8 +4,6 @@ params ["_unit"];
 
 if(isNull _unit) exitWith { false; };
 
-TRACE_1("clear actions",_unit);
-
 private _cargoActions = _unit getVariable [QGVAR(cargoActions), []];
 
 {
@@ -14,5 +12,3 @@ private _cargoActions = _unit getVariable [QGVAR(cargoActions), []];
 } forEach _cargoActions;
 
 _unit setVariable [QGVAR(cargoActions), [], false];
-
-TRACE_1("clear actions done",_unit);

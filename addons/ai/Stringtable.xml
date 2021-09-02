@@ -18,6 +18,10 @@
 			<English>Unload %1 from %2</English>
 			<Russian>Выгрузить %1 из %2</Russian>
 		</Key>
+		<Key ID="STR_ire_mod_ai_cargoActionVehicleMoving">
+			<English>Cannot unload %1, %2 is moving!</English>
+			<Russian>Не могу выгрузить %1, %2 в движении!</Russian>
+		</Key>
 		<Key ID="STR_ire_mod_ai_cargoActionTooFarAway">
 			<English>Could not unload %1 from %2, too far away!</English>
 			<Russian>Не могу выгрузить %1 из %2, слишком далеко!</Russian>

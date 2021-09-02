@@ -7,6 +7,12 @@ private _distance = _unit distance _vehicle;
 private _vehName = [_vehicle] call ire_mod_main_fnc_getDisplayName;
 private _itemName = [_item] call ire_mod_main_fnc_getDisplayName;
 
+if(!([_vehicle] call FUNC(vehicleIsStationary))) exitWith {
+	TRACE_2("Vehicle not stationary",_item,_vehicle);
+	[_unit, (format [LLSTRING(cargoActionVehicleMoving), _itemName, _vehName])] call EFUNC(main,groupChatGlobal);
+	false;
+};
+
 if(_distance > _radius) exitWith {
 	TRACE_2("Too far away from vehicle",_distance,_radius);
 	[_unit, (format [LLSTRING(cargoActionTooFarAway), _itemName, _vehName])] call EFUNC(main,groupChatGlobal);

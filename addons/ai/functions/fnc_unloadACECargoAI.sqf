@@ -14,14 +14,16 @@ if(_distance > _radius) exitWith {
 	false;
 };
 
-_unit disableAI "RADIOPROTOCOL";
-_unit doMove position _vehicle;
+private _pos = [_vehicle] call CBA_fnc_getPos;
 
-private _distanceNow = _unit distance _vehicle;
+_unit disableAI "RADIOPROTOCOL";
+_unit doMove _pos;
+
+private _distanceNow = _unit distance _pos;
 
 waitUntil {
 	sleep 0.5;
-	_distanceNow = _unit distance _vehicle;
+	_distanceNow = _unit distance _pos;
 	_distanceNow < _unloadDistance;
 };
 

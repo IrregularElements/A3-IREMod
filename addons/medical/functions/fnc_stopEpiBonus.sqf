@@ -19,7 +19,7 @@ _patient setVariable [VAR_ACTIVE_EPI_BONUS_SAVED, nil, true];
 _patient setVariable [VAR_IS_FORCED_CONSCIOUS, false, true];
 
 [_patient] call ace_medical_vitals_fnc_handleUnitVitals;
-_isInCriticalCondition = !([_patient] call ace_medical_status_fnc_hasStableVitals);
+private _isInCriticalCondition = !([_patient] call ace_medical_status_fnc_hasStableVitals);
 
 if(_wasUnconscious && _isInCriticalCondition) then {
 	[_patient, _wasUnconscious] call ace_medical_fnc_setUnconscious;

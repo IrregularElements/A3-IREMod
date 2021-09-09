@@ -20,21 +20,11 @@ if(_distance > _radius) exitWith {
 	false;
 };
 
-private _pos = [_vehicle] call CBA_fnc_getPos;
-
 _unit disableAI "RADIOPROTOCOL";
-_unit doMove _pos;
 
-private _distanceNow = _unit distance _pos;
-
-waitUntil {
-	sleep 0.5;
-	_distanceNow = _unit distance _pos;
-	_distanceNow < _unloadDistance;
-};
+[_unit, _vehicle, _unloadDistance] call FUNC(navigateTo);
 
 doStop _unit;
-
 _unit disableAI "MOVE";
 
 // Normalize class name

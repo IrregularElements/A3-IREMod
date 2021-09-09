@@ -4,5 +4,6 @@
 	[LSTRING(cargoUnloadActionsEnabled_DisplayName), LSTRING(cargoUnloadActionsEnabled_Description)],
 	[ELSTRING(main,settingsCategory), LSTRING(settingsSubcategory)],
 	false,
-	true
+	true,
+	{[ACE_player] call FUNC(refreshCargoActionsGroup);}
 ] call CBA_fnc_addSetting;

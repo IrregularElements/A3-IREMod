@@ -6,7 +6,8 @@ files = [
   "docs/",
   "README.md",
   "mod.cpp",
-  "meta.cpp"
+  "meta.cpp",
+  "logo_ire_mod_ca.paa"
 ]
 
 key_name = "{{author}}"

@@ -30,17 +30,13 @@ TRACE_1("startEpiBonus: checks passed", "");
 
 private _isUnconscious = _patient getVariable ["ACE_isUnconscious", false];
 private _isInCardiacArrest = IN_CRDC_ARRST(_patient);
-/*private _SMState = GET_SM_STATE(_patient);*/
 
 TRACE_2(_isUnconscious, _isInCardiacArrest);
 
-// [_was_uncon, _pain_adjustment, ]
 private _epiBonusSaved = [_isUnconscious, _isInCardiacArrest];
 
 _patient setVariable [VAR_ACTIVE_EPI_BONUS_TIME, CBA_missionTime, true];
 _patient setVariable [VAR_ACTIVE_EPI_BONUS_SAVED, _epiBonusSaved, true];
-
-//[_patient, EPI_BONUS_PAIN_ADJUST] call ace_medical_fnc_adjustPainLevel;
 
 _patient setVariable [VAR_IS_FORCED_CONSCIOUS, true];
 

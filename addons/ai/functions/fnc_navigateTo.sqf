@@ -14,9 +14,11 @@ Returns:
     Nothing
 ---------------------------------------------------------------------------- */
 
-params ["_unit", "_destination", ["_acceptRadius", 2]];
+params ["_unit", "_destination", ["_acceptRadius", 2], ["_timeout", 15]];
 
 private _pos = _destination call CBA_fnc_getPos;
+
+private _startTime = CBA_missionTime;
 
 private _lastMoveOrder = CBA_missionTime;
 _unit doMove _pos;
@@ -31,5 +33,5 @@ waitUntil {
 
 	private _distance = _unit distance _pos;
 
-	_distance <= _acceptRadius;
+	_distance <= _acceptRadius || _startTime + _timeout <= CBA_missionTime;
 };

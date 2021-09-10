@@ -26,8 +26,10 @@ _unit doMove _pos;
 waitUntil {
 	_pos = _destination call CBA_fnc_getPos;
 
-	if(_lastMoveOrder + 2 <= CBA_missionTime) then {
-		_unit doMove _pos;
+	if(_lastMoveOrder + 1 <= CBA_missionTime) then {
+		private _newX = ((_pos select 0) + (getPos _unit select 0)) / 2;
+		private _newY = ((_pos select 1) + (getPos _unit select 1)) / 2;
+		_unit doMove [_newX, _newY];
 		_lastMoveOrder = CBA_missionTime;
 	};
 

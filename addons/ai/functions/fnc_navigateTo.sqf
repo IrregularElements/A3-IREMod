@@ -22,6 +22,7 @@ private _startTime = CBA_missionTime;
 
 private _lastMoveOrder = CBA_missionTime;
 _unit doMove _pos;
+_unit moveTo _pos;
 
 waitUntil {
 	_pos = _destination call CBA_fnc_getPos;
@@ -30,6 +31,7 @@ waitUntil {
 		private _newX = ((_pos select 0) + (getPos _unit select 0)) / 2;
 		private _newY = ((_pos select 1) + (getPos _unit select 1)) / 2;
 		_unit doMove [_newX, _newY];
+		_unit moveTo [_newX, _newY];
 		_lastMoveOrder = CBA_missionTime;
 	};
 

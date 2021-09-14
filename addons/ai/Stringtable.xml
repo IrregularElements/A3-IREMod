@@ -12,7 +12,7 @@
 		</Key>
 		<Key ID="STR_ire_mod_ai_cargoUnloadActionsEnabled_Description">
 			<English>Adds actions to commanded AI (available in orders menu) to unload ACE cargo from nearby vehicles.</English>
-			<Russian>Добавляет ИИ под командованием игрока приказы выгрузить карго из находящегося рядом транспорта. </Russian>
+			<Russian>Добавляет ИИ под командованием игрока приказы выгрузить карго из находящегося рядом транспорта.</Russian>
 		</Key>
 		<Key ID="STR_ire_mod_ai_cargoActionDoUnload">
 			<English>Unload %1 from %2</English>

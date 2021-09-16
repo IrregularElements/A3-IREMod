@@ -1,1 +1,2 @@
+PREP(addCBADiaryEntries);
 PREP(refreshAddonDiaryRecords);

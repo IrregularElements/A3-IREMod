@@ -6,5 +6,13 @@
 			<English>UI Tweaks</English>
 			<Russian>Настройки пользовательского интерфейса</Russian>
 		</Key>
+		<Key ID="STR_ire_mod_ui_settingCleanupDiaryRecords_DisplayName">
+			<English>Remove addon help diary records</English>
+			<Russian>Удалить страницы помощи аддонов из дневника</Russian>
+		</Key>
+		<Key ID="STR_ire_mod_ui_settingCleanupDiaryRecords_Description">
+			<English>Removes informational entries (keybindings, credits, etc) added by CBA to the in-map diary.</English>
+			<Russian>Удаляет информационные записи (назначения клавиш, авторы, т.п.), добавленные CBA в дневник в интерфейсе карты.</Russian>
+		</Key>
 	</Package>
 </Project>

@@ -19,9 +19,11 @@ switch(_showEntries) do {
 	};
 
 	case true: {
-		[] call FUNC(addCBADiaryEntries);
+		if(!(player diarySubjectExists "CBA_help_docs")) then {
+			[] call FUNC(addCBADiaryEntries);
+		};
 
-		if(!isNil "TFAR_fnc_addDiaryRecord") then {
+		if(!(player diarySubjectExists "radio") && !isNil "TFAR_fnc_addDiaryRecord") then {
 			call TFAR_fnc_addDiaryRecord;
 		};
 	};

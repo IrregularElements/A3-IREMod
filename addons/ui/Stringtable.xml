@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler - 2014-12-12 -->
+<Project name="ire_mod">
+	<Package name="ui">
+		<Key ID="STR_ire_mod_ui_settingsSubcategory">
+			<English>UI Tweaks</English>
+			<Russian>Настройки пользовательского интерфейса</Russian>
+		</Key>
+	</Package>
+</Project>

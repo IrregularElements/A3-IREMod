@@ -12,12 +12,18 @@ switch(_showEntries) do {
 			CBA_help_DiaryRecordCredits = diaryRecordNull;
 			CBA_help_DiaryRecordAddons  = diaryRecordNull;
 		};
+
+		if(player diarySubjectExists "radio") then {
+			player removeDiarySubject "radio";
+		};
 	};
 
 	case true: {
-		if(player diarySubjectExists "CBA_help_docs") then {
-			[false] call FUNC(refreshCBADiaryRecords);
-		};
+		{
+			if(player diarySubjectExists _x) then {
+				[false] call FUNC(refreshCBADiaryRecords);
+			};
+		} forEach ["CBA_help_docs", "radio"];
 
 		{
 			private _unit = ACE_player;
@@ -59,5 +65,9 @@ switch(_showEntries) do {
 			CBA_help_DiaryRecordAddons = _unit createDiaryRecord ["CBA_help_docs", [localize "STR_CBA_Addons", format ["<font size=20>%1</font><br/>%2", localize "STR_CBA_Addons", call (uiNamespace getVariable "CBA_help_mods")]], taskNull, "", false];
 		} call CBA_fnc_execNextFrame;
 
+
+		if(!isNil "TFAR_fnc_addDiaryRecord") then {
+			call TFAR_fnc_addDiaryRecord;
+		};
 	};
 };

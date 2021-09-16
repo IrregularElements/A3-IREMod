@@ -11,8 +11,8 @@
 			<Russian>Удалить страницы помощи аддонов из дневника</Russian>
 		</Key>
 		<Key ID="STR_ire_mod_ui_settingCleanupDiaryRecords_Description">
-			<English>Removes informational entries (keybindings, credits, etc) added by CBA to the in-map diary.</English>
-			<Russian>Удаляет информационные записи (назначения клавиш, авторы, т.п.), добавленные CBA в дневник в интерфейсе карты.</Russian>
+			<English>Removes informational entries (keybindings, credits, etc) added by the following addons to the in-map diary: CBA, Task Force Radio.</English>
+			<Russian>Удаляет информационные записи (назначения клавиш, авторы, т.п.), добавленные следующими аддонами в дневник в интерфейсе карты: CBA, Task Force Radio.</Russian>
 		</Key>
 	</Package>
 </Project>

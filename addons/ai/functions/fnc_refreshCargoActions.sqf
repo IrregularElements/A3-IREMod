@@ -21,8 +21,8 @@ private _newActionCount = 0;
 
 	{
 		private _item = _x;
-		private _vehName = [_vehicle] call ire_mod_main_fnc_getDisplayName;
-		private _itemName = [_item] call ire_mod_main_fnc_getDisplayName;
+		private _vehName = [_vehicle] call EFUNC(main,getDisplayName);
+		private _itemName = [_item] call EFUNC(main,getDisplayName);
 
 		private _actionId = _unit addAction [
 			(format [LLSTRING(cargoActionDoUnload), _itemName, _vehName]),

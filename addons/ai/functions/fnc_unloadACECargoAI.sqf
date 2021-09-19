@@ -4,8 +4,8 @@ params ["_unit", "_caller", "_actionId", "_arguments"];
 _arguments params ["_item", "_vehicle", ["_radius", 100], ["_unloadDistance", 10]];
 
 private _distance = _unit distance _vehicle;
-private _vehName = [_vehicle] call ire_mod_main_fnc_getDisplayName;
-private _itemName = [_item] call ire_mod_main_fnc_getDisplayName;
+private _vehName = [_vehicle] call EFUNC(main,getDisplayName);
+private _itemName = [_item] call EFUNC(main,getDisplayName);
 
 if(!([_vehicle] call FUNC(vehicleIsStationary))) exitWith {
 	TRACE_2("Vehicle not stationary",_item,_vehicle);

@@ -3,15 +3,15 @@ prefix = "ire_mod"
 author = "tsar_bimbo"
 
 files = [
-  "docs/",
-  "README.md",
-  "mod.cpp",
-  "meta.cpp",
-  "logo_ire_mod_ca.paa"
+	"docs/",
+	"README.md",
+	"mod.cpp",
+	"meta.cpp",
+	"logo_ire_mod_ca.paa"
 ]
 
 key_name = "{{author}}"
 
 releasebuild = [
-  "@zip ire_mod_{{semver.major}}.{{semver.minor}}.{{semver.patch}}"
+	"@zip ire_mod_{{semver.major}}.{{semver.minor}}.{{semver.patch}}"
 ]

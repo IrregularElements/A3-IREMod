@@ -8,5 +8,5 @@ private _allowSelfHints = currentNamespace getVariable [QGVAR(allowTreatmentSelf
 if(_medic == ACE_player && !_allowSelfHints) exitWith { false; };
 
 private _hints = ACE_player getVariable [VAR_TREATMENT_HINTS, []];
-_hints pushBack [_medic, _bodyPart, _usedItem, CBA_missionTime];
+_hints pushBack [_medic, _bodyPart, _className, _usedItem, CBA_missionTime];
 ACE_player setVariable [VAR_TREATMENT_HINTS, _hints];

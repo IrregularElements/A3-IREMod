@@ -2,7 +2,7 @@
 
 [QGVAR(patchWoundLocal), LINKFUNC(patchWoundLocal)] call CBA_fnc_addEventHandler;
 
-GVAR(epinephrineHandler) = [QGVAR(epinephrine), LINKFUNC(handleTreatment)] call CBA_fnc_addEventHandler;
+GVAR(epinephrineHandler) = [QGVAR(epinephrine), LINKFUNC(handleEpinephrine)] call CBA_fnc_addEventHandler;
 TRACE_1(GVAR(epinephrineHandler));
 
 GVAR(treatmentHandler) = ["ace_treatmentSucceded", {

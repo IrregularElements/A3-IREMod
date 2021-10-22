@@ -17,7 +17,17 @@ private _treatmentName = "";
 
 switch(_className) do {
 		// FIXME: investigate why treatmentSucceeded fires before treatment is actually complete
-		case "WoundPatching": { _treatmentName = LLSTRING(settingWoundPatchingEnabled_DisplayName); };
+		case "WoundPatching": {
+			_treatmentName = LLSTRING(settingWoundPatchingEnabled_DisplayName);
+		};
+
+		case "Diagnose";
+		case "CheckPulse";
+		case "CheckBloodPressure";
+		case "CheckResponse": {
+			_treatmentName = getText (configFile >> "ace_medical_treatment_actions" >> _className >> "displayName");
+		};
+
 		default { _treatmentName = getText (configFile >> "CfgWeapons" >> _usedItem >> "displayName"); };
 };
 

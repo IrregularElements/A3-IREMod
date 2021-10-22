@@ -6,3 +6,8 @@ PREP(patchWound);
 PREP(patchWoundLocal);
 PREP(startEpiBonus);
 PREP(stopEpiBonus);
+PREP(addTreatmentHint);
+PREP(removeTreatmentHint);
+PREP(formatTreatmentHint);
+PREP(displayTreatmentHints);
+PREP(purgeTreatmentHints);

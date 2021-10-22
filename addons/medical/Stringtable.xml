@@ -24,7 +24,7 @@
 		</Key>
 		<Key ID="STR_ire_mod_medical_settingWoundPatchingEnabled_DisplayName">
 			<English>Wound patching</English>
-			<Russian>Штопка ран</Russian>
+			<Russian>Заштопывание раны</Russian>
 		</Key>
 		<Key ID="STR_ire_mod_medical_settingWoundPatchingEnabled_Description">
 			<English>When both medic and patient are out of bandages, enables patching up wounds; this is much slower but does not consume bandages.</English>
@@ -32,15 +32,15 @@
 		</Key>
 		<Key ID="STR_ire_mod_medical_settingWoundPatchingTimeMultiplier_DisplayName">
 			<English>Wound patching time multiplier</English>
-			<Russian>Множитель времени для штопки</Russian>
+			<Russian>Множитель времени для заштопывания</Russian>
 		</Key>
 		<Key ID="STR_ire_mod_medical_settingWoundPatchingTimeMultiplier_Description">
 			<English>Time wound patching takes up, in form of a factor relative to bandaging.</English>
-			<Russian>Время, требуемое на штопку раны, в виде множителя относительно забинтовывания.</Russian>
+			<Russian>Время, требуемое на заштопывание раны, в виде множителя относительно забинтовывания.</Russian>
 		</Key>
 		<Key ID="STR_ire_mod_medical_actionWoundPatching">
 			<English>Patch</English>
-			<Russian>Штопать</Russian>
+			<Russian>Заштопать</Russian>
 		</Key>
 		<Key ID="STR_ire_mod_medical_actionWoundPatchingProgress">
 			<English>Patching...</English>

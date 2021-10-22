@@ -1,8 +1,13 @@
 PREP(canPatchWounds);
 PREP(getWoundPatchingTime);
-PREP(handleTreatment);
+PREP(handleEpinephrine);
 PREP(isForcedConscious);
 PREP(patchWound);
 PREP(patchWoundLocal);
 PREP(startEpiBonus);
 PREP(stopEpiBonus);
+PREP(addTreatmentHint);
+PREP(removeTreatmentHint);
+PREP(formatTreatmentHint);
+PREP(displayTreatmentHints);
+PREP(purgeTreatmentHints);

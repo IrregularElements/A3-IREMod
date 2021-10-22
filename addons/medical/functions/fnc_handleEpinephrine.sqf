@@ -2,7 +2,7 @@
 
 params ["_medic", "_patient", "_bodyPart", "_classname"];
 
-TRACE_4("handleTreatment", _medic, _patient, _bodyPart, _className);
+TRACE_4("handleEpinephrine", _medic, _patient, _bodyPart, _className);
 
 if(!GVAR(epiBonusEnabled) || (GVAR(epiBonusDuration) <= 0)) exitWith { false; };
 if((toUpper _classname) != "EPINEPHRINE") exitWith { false; };

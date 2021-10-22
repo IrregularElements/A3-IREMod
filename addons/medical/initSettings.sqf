@@ -1,4 +1,18 @@
 [
+	QGVAR(treatmentHintsEnabled),
+	"CHECKBOX",
+	[LSTRING(settingAssistHintsEnabled_DisplayName), LSTRING(settingAssistHintsEnabled_Description)],
+	[ELSTRING(main,settingsCategory), LSTRING(settingsSubcategory)],
+	false,
+	true,
+	{
+		if(GVAR(treatmentHintsEnabled)) then {
+			[] call FUNC(displayTreatmentHints);
+		};
+	}
+] call CBA_fnc_addSetting;
+
+[
 	QGVAR(woundPatchingEnabled),
 	"CHECKBOX",
 	[LSTRING(settingWoundPatchingEnabled_DisplayName), LSTRING(settingWoundPatchingEnabled_Description)],

@@ -12,7 +12,7 @@
 // MINIMAL required version for the Mod. Components can specify others..
 #define REQUIRED_VERSION 2.02
 #define REQUIRED_CBA_VERSION {3,15,2}
-#define REQUIRED_ACE_VERSION {3,13,6}
+#define REQUIRED_ACE_VERSION {3,14,0}
 
 #ifdef COMPONENT_BEAUTIFIED
     #define COMPONENT_NAME QUOTE(IRE Mod - COMPONENT_BEAUTIFIED)

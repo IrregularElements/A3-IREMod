@@ -36,9 +36,7 @@ GVAR(treatmentFailedHandler) = ["ace_treatmentFailed", {
 
 	[QGVAR(removeTreatmentHint), _this, _patient] call CBA_fnc_targetEvent;
 
-	if(GVAR(treatmentHintsEnabled)) then {
-		[] call FUNC(displayTreatmentHints);
-	};
+	[] call FUNC(displayTreatmentHints);
 }] call CBA_fnc_addEventHandler;
 TRACE_1(GVAR(treatmentFailedHandler));
 
@@ -49,8 +47,6 @@ GVAR(treatmentSucceededHandler) = ["ace_treatmentSucceded", {
 
 	[QGVAR(removeTreatmentHint), _this, _patient] call CBA_fnc_targetEvent;
 
-	if(GVAR(treatmentHintsEnabled)) then {
-		[] call FUNC(displayTreatmentHints);
-	};
+	[] call FUNC(displayTreatmentHints);
 }] call CBA_fnc_addEventHandler;
 TRACE_1(GVAR(treatmentSucceededHandler));

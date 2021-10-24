@@ -8,6 +8,9 @@
 	{
 		if(GVAR(treatmentHintsEnabled)) then {
 			[] call FUNC(displayTreatmentHints);
+		}
+		else {
+			[] call FUNC(purgeTreatmentHints);
 		};
 	}
 ] call CBA_fnc_addSetting;

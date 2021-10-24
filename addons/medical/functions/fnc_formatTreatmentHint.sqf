@@ -16,7 +16,6 @@ private _bodyPartName = localize (format ["STR_ACE_Medical_GUI_%1", _bodyPart]);
 private _treatmentName = "";
 
 switch(_className) do {
-		// FIXME: investigate why treatmentSucceeded fires before treatment is actually complete
 		case "WoundPatching": {
 			_treatmentName = LLSTRING(settingWoundPatchingEnabled_DisplayName);
 		};

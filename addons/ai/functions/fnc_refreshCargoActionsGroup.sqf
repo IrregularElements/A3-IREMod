@@ -4,9 +4,11 @@ params ["_unit"];
 
 if(!(_unit isKindOf "CAManBase")) exitWith { false; };
 
+private _excludedUnits = BIS_fnc_listPlayers;
+
 {
 	[_x] call FUNC(clearCargoActions);
 	if(GVAR(cargoUnloadActionsEnabled)) then {
 		[_x] call FUNC(refreshCargoActions);
 	};
-} forEach ((units _unit) - [_unit]);
+} forEach ((units _unit) - _excludedUnits);

@@ -1,3 +1,3 @@
 *.cpp linguist-language=SQF
 *.hpp linguist-language=SQF
-include/** linguist-language=SQF
+include/** linguist-vendored

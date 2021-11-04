@@ -6,6 +6,14 @@
 			<English>UI Tweaks</English>
 			<Russian>Настройки пользовательского интерфейса</Russian>
 		</Key>
+		<Key ID="STR_ire_mod_ui_settingShowTerrainName_DisplayName">
+			<English>Show terrain name in the map screen</English>
+			<Russian>Показывать название местности на карте</Russian>
+		</Key>
+		<Key ID="STR_ire_mod_ui_settingShowTerrainName_Description">
+			<English>Shows the user-readable terrain description on the top panel of the in-game map screen.</English>
+			<Russian>Показывает читаемое описание местности на панели внутриигровой карты.</Russian>
+		</Key>
 		<Key ID="STR_ire_mod_ui_settingCleanupDiaryRecords_DisplayName">
 			<English>Remove addon help diary records</English>
 			<Russian>Удалить страницы помощи аддонов из дневника</Russian>

@@ -41,7 +41,7 @@ Parameters:
     _isStructuredText
 ---------------------------------------------------------------------------- */
 
-#define VERTICAL_OFFSET 13
+#define VERTICAL_OFFSET 14
 
 params ["_layer", "_text", ["_showInMap", true], ["_isStructuredText", false]];
 

@@ -11,7 +11,7 @@ All of the addon PBOs implicitly depend on `ire_mod_main` and CBA.
 
 ### Cargo unload actions
 
-![](./ai_cargo-unload-actions.jpg)
+![](./screenshots/ai_cargo-unload-actions.jpg)
 
 **CBA settings**:
 - `ire_mod_ai_cargoUnloadActionsEnabled` (Global, boolean)
@@ -28,7 +28,7 @@ commanded AI units to unload specific ACE cargo items from nearby vehicles.
 
 ### Treatment hints
 
-![](./medical_treatment-hints.jpg)
+![](./screenshots/medical_treatment-hints.jpg)
 
 **CBA settings**:
 - `ire_mod_medical_treatmentHintsEnabled` (Global, boolean)
@@ -67,7 +67,7 @@ injection).
 
 ### Show terrain name in map
 
-![](./ui_terrain-name.jpg)
+![](./screenshots/ui_terrain-name.jpg)
 
 **CBA settings**:
 - `ire_mod_ui_showTerrainNameInMap` (Client only, boolean)
@@ -77,7 +77,7 @@ panel.
 
 ### Clean up diary records
 
-![](./ui_remove-diary-entries.jpg)
+![](./screenshots/ui_remove-diary-entries.jpg)
 
 **CBA settings**:
 - `ire_mod_ui_cleanupDiaryRecords` (Client only, boolean)

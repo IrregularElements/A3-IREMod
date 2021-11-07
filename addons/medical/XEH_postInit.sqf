@@ -4,14 +4,10 @@
 
 
 GVAR(epinephrineHandler) = [QGVAR(epinephrine), LINKFUNC(handleEpinephrine)] call CBA_fnc_addEventHandler;
-TRACE_1(GVAR(epinephrineHandler));
-
 
 GVAR(addTreatmentHintHandler) = [QGVAR(addTreatmentHint), LINKFUNC(addTreatmentHint)] call CBA_fnc_addEventHandler;
-TRACE_1(GVAR(addTreatmentHintHandler));
 
 GVAR(removeTreatmentHintHandler) = [QGVAR(removeTreatmentHint), LINKFUNC(removeTreatmentHint)] call CBA_fnc_addEventHandler;
-TRACE_1(GVAR(removeTreatmentHintHandler));
 
 
 TREATMENT_HINTS_LAYER_VAR = [TREATMENT_HINTS_LAYER_NAME] call BIS_fnc_rscLayer;
@@ -29,7 +25,6 @@ GVAR(treatmentStartedHandler) = ["ace_treatmentStarted", {
 		[] call FUNC(displayTreatmentHints);
 	};
 }] call CBA_fnc_addEventHandler;
-TRACE_1(GVAR(treatmentStartedHandler));
 
 GVAR(treatmentFailedHandler) = ["ace_treatmentFailed", {
 	params ["_medic", "_patient", "_bodyPart", "_classname", "_itemUser", "_usedItem"];
@@ -38,7 +33,6 @@ GVAR(treatmentFailedHandler) = ["ace_treatmentFailed", {
 
 	[] call FUNC(displayTreatmentHints);
 }] call CBA_fnc_addEventHandler;
-TRACE_1(GVAR(treatmentFailedHandler));
 
 GVAR(treatmentSucceededHandler) = ["ace_treatmentSucceded", {
 	params ["_medic", "_patient", "_bodyPart", "_classname", "_itemUser", "_usedItem"];
@@ -49,4 +43,3 @@ GVAR(treatmentSucceededHandler) = ["ace_treatmentSucceded", {
 
 	[] call FUNC(displayTreatmentHints);
 }] call CBA_fnc_addEventHandler;
-TRACE_1(GVAR(treatmentSucceededHandler));

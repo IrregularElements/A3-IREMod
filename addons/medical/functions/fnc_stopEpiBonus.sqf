@@ -2,8 +2,6 @@
 
 params ["_patient"];
 
-TRACE_1("stopEpiBonus", _patient);
-
 if(!(_patient isKindOf "CAManBase")) exitWith { false; };
 if(!(alive _patient)) exitWith { false; };
 
@@ -11,8 +9,6 @@ private _lastEpiBonusSaved = _patient getVariable [VAR_ACTIVE_EPI_BONUS_SAVED, n
 if(isNil "_lastEpiBonusSaved") exitWith { false; };
 
 _lastEpiBonusSaved params ["_wasUnconscious", "_wasInCardiacArrest"];
-
-TRACE_2("Last saved", _wasUnconscious, _wasInCardiacArrest);
 
 _patient setVariable [VAR_ACTIVE_EPI_BONUS_TIME, nil, true];
 _patient setVariable [VAR_ACTIVE_EPI_BONUS_SAVED, nil, true];
@@ -25,13 +21,11 @@ if(_wasUnconscious && _isInCriticalCondition) then {
 	[_patient, _wasUnconscious] call ace_medical_fnc_setUnconscious;
 
 	private _currentState = [_patient, ace_medical_STATE_MACHINE] call CBA_statemachine_fnc_getCurrentState;
-	TRACE_2("Changing state machine:", _currentState, "Unconscious");
 	[_patient, ace_medical_STATE_MACHINE, _currentState, "Unconscious"] call CBA_statemachine_fnc_manualTransition;
 	[_patient, true] call ace_medical_status_fnc_setUnconsciousState;
 	["ace_medical_knockOut", _patient] call CBA_fnc_localEvent;
 
 	if(_wasInCardiacArrest) then {
-		TRACE_2("Changing state machine:", "Unconscious->CardiacArrest");
 		[_patient, _wasInCardiacArrest] call ace_medical_status_fnc_setCardiacArrestState;
 		[_patient, ace_medical_STATE_MACHINE, "Unconscious", "CardiacArrest"] call CBA_statemachine_fnc_manualTransition;
 	};

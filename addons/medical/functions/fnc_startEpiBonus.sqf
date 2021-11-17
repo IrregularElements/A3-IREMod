@@ -21,12 +21,8 @@ Returns:
 
 params ["_patient", ["_duration", GVAR(epiBonusDuration)]];
 
-TRACE_1("startEpiBonus", _patient);
-
 if(!(_patient isKindOf "CAManBase")) exitWith { false; };
 if(!(alive _patient)) exitWith { false; };
-
-TRACE_1("startEpiBonus: checks passed", "");
 
 private _isUnconscious = _patient getVariable ["ACE_isUnconscious", false];
 private _isInCardiacArrest = IN_CRDC_ARRST(_patient);
@@ -44,7 +40,6 @@ _patient setVariable [VAR_IS_FORCED_CONSCIOUS, true];
 
 if(_isUnconscious) then {
 	private _currentState = [_patient, ace_medical_STATE_MACHINE] call CBA_statemachine_fnc_getCurrentState;
-	TRACE_2("Changing state machine:", _currentState, "Injured");
 	[_patient, ace_medical_STATE_MACHINE, _currentState, "Injured"] call CBA_statemachine_fnc_manualTransition;
 	[_patient, false] call ace_medical_status_fnc_setUnconsciousState;
 	["ace_medical_wakeUp", _patient] call CBA_fnc_localEvent;

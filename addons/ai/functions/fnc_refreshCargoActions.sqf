@@ -3,7 +3,6 @@
 params ["_unit", ["_distance", 50]];
 
 if(isNull _unit) exitWith {
-	TRACE_1("Unit is nil", _unit);
 	false;
 };
 
@@ -37,7 +36,7 @@ private _newActionCount = 0;
 		];
 
 		if(_actionId < 0) then {
-			TRACE_1("actionId failed",_actionId);
+			TRACE_1("addAction failed",_actionId);
 			continue;
 		};
 

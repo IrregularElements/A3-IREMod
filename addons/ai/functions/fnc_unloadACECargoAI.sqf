@@ -8,13 +8,11 @@ private _vehName = [_vehicle] call EFUNC(main,getDisplayName);
 private _itemName = [_item] call EFUNC(main,getDisplayName);
 
 if(!([_vehicle] call FUNC(vehicleIsStationary))) exitWith {
-	TRACE_2("Vehicle not stationary",_item,_vehicle);
 	[_unit, (format [LLSTRING(cargoActionVehicleMoving), _itemName, _vehName])] call EFUNC(main,groupChatGlobal);
 	false;
 };
 
 if(_distance > _radius) exitWith {
-	TRACE_2("Too far away from vehicle",_distance,_radius);
 	[_unit, (format [LLSTRING(cargoActionTooFarAway), _itemName, _vehName])] call EFUNC(main,groupChatGlobal);
 	[_unit] call FUNC(refreshCargoActions);
 	false;
@@ -36,7 +34,6 @@ if(typeName _item == "STRING") then {
 private _unloadResult = [_item, _vehicle] call ace_cargo_fnc_unloadItem;
 
 if(!_unloadResult) then {
-	TRACE_3("Unload failed",_unit,_item,_vehicle);
 	[_unit, (format [LLSTRING(cargoActionUnloadFailed), _itemName, _vehName])] call EFUNC(main,groupChatGlobal);
 };
 

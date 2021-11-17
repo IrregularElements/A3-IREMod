@@ -1,7 +1,6 @@
 #include "script_component.hpp"
 
 params ["_medic", "_patient", "_bodyPart", "_classname", "_itemUser", "_usedItem"];
-TRACE_1("addTreatmentHint",_this);
 
 private _allowSelfHints = currentNamespace getVariable [QGVAR(allowTreatmentSelfHints), false];
 

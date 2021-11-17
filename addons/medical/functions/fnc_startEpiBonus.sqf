@@ -60,7 +60,7 @@ private _antiLimpScriptHandle = [
 			_patient setVariable [VAR_ANTILIMP_SCRIPT_HND, nil, true];
 		};
 	},
-	1,
+	0,
 	[_patient, _stopTime]
 ] call CBA_fnc_addPerFrameHandler;
 

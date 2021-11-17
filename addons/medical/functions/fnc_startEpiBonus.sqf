@@ -47,15 +47,21 @@ if(_isUnconscious) then {
 
 private _stopTime = CBA_missionTime + _duration;
 
-private _antiLimpScriptHandle = [_patient, _stopTime] spawn {
-	params ["_patient", "_stopTime"];
+private _antiLimpScriptHandle = [
+	{
+		params ["_args", "_handle"];
+		_args params ["_patient", "_stopTime"];
 
-	waitUntil {
 		_patient setHitPointDamage ["HitHands", 0];
 		_patient setHitPointDamage ["HitLegs", 0];
-		sleep 1;
-		CBA_missionTime > _stopTime;
-	};
-};
+
+		if(CBA_missionTime > _stopTime) then {
+			[_handle] call CBA_fnc_removePerFrameHandler;
+			_patient setVariable [VAR_ANTILIMP_SCRIPT_HND, nil, true];
+		};
+	},
+	1,
+	[_patient, _stopTime]
+] call CBA_fnc_addPerFrameHandler;
 
 _patient setVariable [VAR_ANTILIMP_SCRIPT_HND, _antiLimpScriptHandle, true];

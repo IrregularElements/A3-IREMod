@@ -32,8 +32,8 @@ if(_wasUnconscious && _isInCriticalCondition) then {
 };
 
 private _antiLimpScriptHandle = _patient getVariable [VAR_ANTILIMP_SCRIPT_HND, nil];
-if(!(scriptDone _antiLimpScriptHandle)) then {
-	terminate _antiLimpScriptHandle;
+if(!(isNil "_antiLimpScriptHandle")) then {
+	[_antiLimpScriptHandle] call CBA_fnc_removePerFrameHandler;
 };
 _patient setVariable [VAR_ANTILIMP_SCRIPT_HND, nil, true];
 _patient call ace_medical_engine_fnc_updateDamageEffects;

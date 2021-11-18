@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-["CBA_settingsInitialized", {
+GVAR(onCBASettingsEH) = ["CBA_settingsInitialized", {
 	if(hasInterface) then {
 		[] call FUNC(refreshAddonDiaryRecords);
 		[{

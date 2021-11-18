@@ -3,11 +3,11 @@
 [QGVAR(patchWoundLocal), LINKFUNC(patchWoundLocal)] call CBA_fnc_addEventHandler;
 
 
-GVAR(epinephrineHandler) = [QGVAR(epinephrine), LINKFUNC(handleEpinephrine)] call CBA_fnc_addEventHandler;
+GVAR(epinephrineEH) = [QGVAR(epinephrine), LINKFUNC(handleEpinephrine)] call CBA_fnc_addEventHandler;
 
-GVAR(addTreatmentHintHandler) = [QGVAR(addTreatmentHint), LINKFUNC(addTreatmentHint)] call CBA_fnc_addEventHandler;
+GVAR(addTreatmentHintEH) = [QGVAR(addTreatmentHint), LINKFUNC(addTreatmentHint)] call CBA_fnc_addEventHandler;
 
-GVAR(removeTreatmentHintHandler) = [QGVAR(removeTreatmentHint), LINKFUNC(removeTreatmentHint)] call CBA_fnc_addEventHandler;
+GVAR(removeTreatmentHintEH) = [QGVAR(removeTreatmentHint), LINKFUNC(removeTreatmentHint)] call CBA_fnc_addEventHandler;
 
 
 TREATMENT_HINTS_LAYER_VAR = [TREATMENT_HINTS_LAYER_NAME] call BIS_fnc_rscLayer;
@@ -16,7 +16,7 @@ TREATMENT_HINTS_LAYER_VAR = [TREATMENT_HINTS_LAYER_NAME] call BIS_fnc_rscLayer;
 GVAR(allowTreatmentSelfHints) = false;
 
 
-GVAR(treatmentStartedHandler) = ["ace_treatmentStarted", {
+GVAR(treatmentStartedEH) = ["ace_treatmentStarted", {
 	params ["_medic", "_patient", "_bodyPart", "_classname", "_itemUser", "_usedItem"];
 
 	[QGVAR(addTreatmentHint), _this, _patient] call CBA_fnc_targetEvent;
@@ -26,7 +26,7 @@ GVAR(treatmentStartedHandler) = ["ace_treatmentStarted", {
 	};
 }] call CBA_fnc_addEventHandler;
 
-GVAR(treatmentFailedHandler) = ["ace_treatmentFailed", {
+GVAR(treatmentFailedEH) = ["ace_treatmentFailed", {
 	params ["_medic", "_patient", "_bodyPart", "_classname", "_itemUser", "_usedItem"];
 
 	[QGVAR(removeTreatmentHint), _this, _patient] call CBA_fnc_targetEvent;
@@ -34,7 +34,7 @@ GVAR(treatmentFailedHandler) = ["ace_treatmentFailed", {
 	[] call FUNC(displayTreatmentHints);
 }] call CBA_fnc_addEventHandler;
 
-GVAR(treatmentSucceededHandler) = ["ace_treatmentSucceded", {
+GVAR(treatmentSucceededEH) = ["ace_treatmentSucceded", {
 	params ["_medic", "_patient", "_bodyPart", "_classname", "_itemUser", "_usedItem"];
 
 	[QGVAR(epinephrine), [_medic, _patient, _bodyPart, _classname], _patient] call CBA_fnc_targetEvent;

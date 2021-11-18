@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-params ["_unit", "_caller", "_actionId", "_arguments"];
+params ["_unit", "", "", "_arguments"];
 _arguments params ["_item", "_vehicle", ["_radius", 100], ["_unloadDistance", 10]];
 
 private _distance = _unit distance _vehicle;

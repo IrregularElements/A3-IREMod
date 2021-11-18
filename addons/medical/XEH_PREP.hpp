@@ -2,6 +2,7 @@ PREP(canPatchWounds);
 PREP(getWoundPatchingTime);
 PREP(handleEpinephrine);
 PREP(isForcedConscious);
+PREP(forceConscious);
 PREP(patchWound);
 PREP(patchWoundLocal);
 PREP(startEpiBonus);

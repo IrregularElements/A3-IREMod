@@ -39,10 +39,7 @@ _patient setVariable [VAR_IS_FORCED_CONSCIOUS, true];
 [_patient, false] call ace_medical_status_fnc_setCardiacArrestState;
 
 if(_isUnconscious) then {
-	private _currentState = [_patient, ace_medical_STATE_MACHINE] call CBA_statemachine_fnc_getCurrentState;
-	[_patient, ace_medical_STATE_MACHINE, _currentState, "Injured"] call CBA_statemachine_fnc_manualTransition;
-	[_patient, false] call ace_medical_status_fnc_setUnconsciousState;
-	["ace_medical_wakeUp", _patient] call CBA_fnc_localEvent;
+	[_patient, true] call FUNC(forceConscious);
 };
 
 private _stopTime = CBA_missionTime + _duration;

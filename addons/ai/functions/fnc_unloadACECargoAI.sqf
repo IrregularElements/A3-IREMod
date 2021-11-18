@@ -4,16 +4,26 @@ params ["_unit", "", "", "_arguments"];
 _arguments params ["_item", "_vehicle", ["_radius", 100], ["_unloadDistance", 10]];
 
 private _distance = _unit distance _vehicle;
-private _vehName = [_vehicle] call EFUNC(main,getDisplayName);
-private _itemName = [_item] call EFUNC(main,getDisplayName);
 
 if(!([_vehicle] call FUNC(vehicleIsStationary))) exitWith {
-	[_unit, (format [LLSTRING(cargoActionVehicleMoving), _itemName, _vehName])] call EFUNC(main,groupChatGlobal);
+	[_unit, {
+		params ["_message", "_item", "_vehicle"];
+		private _itemName = [_item] call EFUNC(main,getDisplayName);
+		private _vehName = [_vehicle] call EFUNC(main,getDisplayName);
+		private _message = localize _message;
+		format [_message, _itemName, _vehName];
+	}, [LSTRING(cargoActionVehicleMoving), _item, _vehicle]] call EFUNC(main,groupChatGlobal);
 	false;
 };
 
 if(_distance > _radius) exitWith {
-	[_unit, (format [LLSTRING(cargoActionTooFarAway), _itemName, _vehName])] call EFUNC(main,groupChatGlobal);
+	[_unit, {
+		params ["_message", "_item", "_vehicle"];
+		private _itemName = [_item] call EFUNC(main,getDisplayName);
+		private _vehName = [_vehicle] call EFUNC(main,getDisplayName);
+		private _message = localize _message;
+		format [_message, _itemName, _vehName];
+	}, [LSTRING(cargoActionTooFarAway), _item, _vehicle]] call EFUNC(main,groupChatGlobal);
 	[_unit] call FUNC(refreshCargoActions);
 	false;
 };
@@ -34,7 +44,13 @@ if(typeName _item == "STRING") then {
 private _unloadResult = [_item, _vehicle] call ace_cargo_fnc_unloadItem;
 
 if(!_unloadResult) then {
-	[_unit, (format [LLSTRING(cargoActionUnloadFailed), _itemName, _vehName])] call EFUNC(main,groupChatGlobal);
+	[_unit, {
+		params ["_message", "_item", "_vehicle"];
+		private _itemName = [_item] call EFUNC(main,getDisplayName);
+		private _vehName = [_vehicle] call EFUNC(main,getDisplayName);
+		private _message = localize _message;
+		format [_message, _itemName, _vehName];
+	}, [LSTRING(cargoActionUnloadFailed), _item, _vehicle]] call EFUNC(main,groupChatGlobal);
 };
 
 [_unit] call FUNC(refreshCargoActions);
@@ -42,6 +58,12 @@ if(!_unloadResult) then {
 _unit enableAI "MOVE";
 _unit enableAI "RADIOPROTOCOL";
 
-[_unit, (format [LLSTRING(cargoActionComplete), _itemName, _vehName])] call EFUNC(main,groupChatGlobal);
+[_unit, {
+	params ["_message", "_item", "_vehicle"];
+	private _itemName = [_item] call EFUNC(main,getDisplayName);
+	private _vehName = [_vehicle] call EFUNC(main,getDisplayName);
+	private _message = localize _message;
+	format [_message, _itemName, _vehName];
+}, [LSTRING(cargoActionComplete), _item, _vehicle]] call EFUNC(main,groupChatGlobal);
 
 _unloadResult;

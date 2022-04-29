@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-params ["_unit"];
+params [["_unit", ACE_player]];
 
 if(!(_unit isKindOf "CAManBase")) exitWith { false; };
 

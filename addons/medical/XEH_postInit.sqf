@@ -11,9 +11,16 @@ GVAR(removeTreatmentHintEH) = [QGVAR(removeTreatmentHint), LINKFUNC(removeTreatm
 
 
 TREATMENT_HINTS_LAYER_VAR = [TREATMENT_HINTS_LAYER_NAME] call BIS_fnc_rscLayer;
-// This variable is not exposed as a CBA setting because it could only be required
-// for debugging.
+
+// Not exposed as a CBA setting: ire_mod_medical_allowTreatmentSelfHints
+// (boolean, default: false)
+// Shows treatment hints to the player when they are treating themselves.
 GVAR(allowTreatmentSelfHints) = false;
+// Not exposed as a CBA setting: ire_mod_medical_cooldownOnFailedEpiBonus
+// (boolean, default: false)
+// Starts the epinephrine cooldown if epinephrine bonus was not applied
+// due to a failed probability check.
+GVAR(cooldownOnFailedEpiBonus) = false;
 
 
 GVAR(treatmentStartedEH) = ["ace_treatmentStarted", {

@@ -58,6 +58,14 @@
 			<English>The patient will temporarily wake up and stop limping after an epinephrine injection.</English>
 			<Russian>Пациент временно придёт в себя и перестанет хромать после инъекции адреналина.</Russian>
 		</Key>
+		<Key ID="STR_ire_mod_medical_settingEpiBonusProbability_DisplayName">
+			<English>Epinephrine bonus probability</English>
+			<Russian>Вероятность получения адреналинового бонуса</Russian>
+		</Key>
+		<Key ID="STR_ire_mod_medical_settingEpiBonusProbability_Description">
+			<English>Probability that a given epinephrine injection will grant an epinephrine bonus.</English>
+			<Russian>Вероятность того, что инъекция адреналина даст бонус.</Russian>
+		</Key>
 		<Key ID="STR_ire_mod_medical_settingEpiBonusDuration_DisplayName">
 			<English>Epinephrine bonus duration</English>
 			<Russian>Длительность адреналинового бонуса</Russian>

@@ -18,5 +18,19 @@ if(!(isNil "_lastEpiBonus")) then {
 	};
 };
 
-[_patient] call FUNC(startEpiBonus);
-[FUNC(stopEpiBonus), [_patient], GVAR(epiBonusDuration)] call CBA_fnc_waitAndExecute;
+private _percentageRoll = random 1.0;
+private _probability = GVAR(epiBonusProbability);
+private _cooldownAfterFail = GVAR(cooldownOnFailedEpiBonus);
+
+if(_percentageRoll <= _probability) then {
+	// Successful epi bonus roll
+	[_patient] call FUNC(saveEpiBonusTime);
+	[_patient] call FUNC(startEpiBonus);
+	[FUNC(stopEpiBonus), [_patient], GVAR(epiBonusDuration)] call CBA_fnc_waitAndExecute;
+}
+else {
+	// Failed epi bonus roll
+	if(_cooldownAfterFail) then {
+		[_patient] call FUNC(saveEpiBonusTime);
+	};
+};

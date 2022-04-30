@@ -51,13 +51,20 @@ Enables wound patching, which works like a bandage, but slower by the factor of
 ### Epinephrine bonus
 **CBA settings**:
 - `ire_mod_medical_epiBonusEnabled` (Global, boolean)
+- `ire_mod_medical_epiBonusProbability` (Global, percentage)
 - `ire_mod_medical_epiBonusDuration` (Global, time in seconds)
 - `ire_mod_medical_epiBonusCooldown` (Global, time in seconds)
+
+**Other variables**:
+- `ire_mod_medical_cooldownOnFailedEpiBonus` (boolean, default: `false`)
 
 Enables epinephrine bonus, which will force a unit treated with epinephrine to
 temporarily wake up and stop limping.  The cooldown setting is counted between
 epinephrine injections (not between epinephrine bonus ending and another
-injection).
+injection).  The epinephrine bonus effect is applied conditionally with the
+probability `ire_mod_medical_epiBonusProbability`; if
+`ire_mod_medical_cooldownOnFailedEpiBonus` is set to true, cooldown will also
+fire after a failed bonus check.
 
 ---
 

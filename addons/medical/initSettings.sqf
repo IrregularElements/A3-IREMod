@@ -43,6 +43,15 @@
 ] call CBA_fnc_addSetting;
 
 [
+	QGVAR(epiBonusProbability),
+	"SLIDER",
+	[LSTRING(settingEpiBonusProbability_DisplayName), LSTRING(settingEpiBonusProbability_Description)],
+	[ELSTRING(main,settingsCategory), LSTRING(settingsSubcategory)],
+	[0, 1, 1, 2, true],
+	true
+] call CBA_fnc_addSetting;
+
+[
 	QGVAR(epiBonusDuration),
 	"TIME",
 	LSTRING(settingEpiBonusDuration_DisplayName),

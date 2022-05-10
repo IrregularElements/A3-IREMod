@@ -3,7 +3,7 @@
 /* ----------------------------------------------------------------------------
 Function: ire_mod_main_fnc_startCutText
 Description:
-    Where do I start with this?..
+	Where do I start with this?..
 
 	This function and its counterpart stopCutText is sort of like
 	Arma's built-in cutText/titleText, except it tries to behave a little bit
@@ -35,10 +35,10 @@ Parameters:
 	See cutText.  The _type parameter is absent; cutText is invoked with "PLAIN NOFADE",
 	and the result looks, give or take, like "PLAIN DOWN".
 
-    _layer
-    _text
-    _showInMap
-    _isStructuredText
+	_layer
+	_text
+	_showInMap
+	_isStructuredText
 ---------------------------------------------------------------------------- */
 
 #define VERTICAL_OFFSET 14

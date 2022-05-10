@@ -12,7 +12,6 @@ private _displayNewTreatmentHintCode = {
 GVAR(epinephrineEH) = [QGVAR(epinephrine), LINKFUNC(handleEpinephrine)] call CBA_fnc_addEventHandler;
 
 GVAR(addTreatmentHintEH) = [QGVAR(addTreatmentHint), LINKFUNC(addTreatmentHint)] call CBA_fnc_addEventHandler;
-
 GVAR(removeTreatmentHintEH) = [QGVAR(removeTreatmentHint), LINKFUNC(removeTreatmentHint)] call CBA_fnc_addEventHandler;
 GVAR(displayNewTreatmentHintsEH) = [QGVAR(displayNewTreatmentHint), _displayNewTreatmentHintCode] call CBA_fnc_addEventHandler;
 GVAR(displayTreatmentHintsEH) = [QGVAR(displayTreatmentHints), LINKFUNC(displayTreatmentHints)] call CBA_fnc_addEventHandler;
@@ -32,26 +31,23 @@ GVAR(cooldownOnFailedEpiBonus) = false;
 
 
 GVAR(treatmentStartedEH) = ["ace_treatmentStarted", {
-	params ["_medic", "_patient", "_bodyPart", "_classname", "_itemUser", "_usedItem"];
+	params ["", "_patient", "", "", "", ""];
 
 	[QGVAR(addTreatmentHint), _this, _patient] call CBA_fnc_targetEvent;
 	[QGVAR(displayNewTreatmentHint), [], _patient] call CBA_fnc_targetEvent;
 }] call CBA_fnc_addEventHandler;
 
 GVAR(treatmentFailedEH) = ["ace_treatmentFailed", {
-	params ["_medic", "_patient", "_bodyPart", "_classname", "_itemUser", "_usedItem"];
+	params ["", "_patient", "", "", "", ""];
 
 	[QGVAR(removeTreatmentHint), _this, _patient] call CBA_fnc_targetEvent;
-
 	[QGVAR(displayTreatmentHints), [], _patient] call CBA_fnc_targetEvent;
 }] call CBA_fnc_addEventHandler;
 
 GVAR(treatmentSucceededEH) = ["ace_treatmentSucceded", {
-	params ["_medic", "_patient", "_bodyPart", "_classname", "_itemUser", "_usedItem"];
+	params ["_medic", "_patient", "_bodyPart", "_classname", "", ""];
 
 	[QGVAR(epinephrine), [_medic, _patient, _bodyPart, _classname], _patient] call CBA_fnc_targetEvent;
-
 	[QGVAR(removeTreatmentHint), _this, _patient] call CBA_fnc_targetEvent;
-
 	[QGVAR(displayTreatmentHints), [], _patient] call CBA_fnc_targetEvent;
 }] call CBA_fnc_addEventHandler;

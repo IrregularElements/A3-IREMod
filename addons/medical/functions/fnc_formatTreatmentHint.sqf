@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 params ["_hint"];
-_hint params ["_medic", "_bodyPart", "_className", "_usedItem", "_timeAdded"];
+_hint params ["_medic", "_bodyPart", "_className", "_usedItem", ""];
 
 if(IS_UNCONSCIOUS(ACE_player)) exitWith {
 	format [LLSTRING(treatmentHint_Unconscious)];

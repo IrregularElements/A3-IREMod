@@ -18,6 +18,26 @@
 			<English>Someone is helping you</English>
 			<Russian>Вам оказывают помощь</Russian>
 		</Key>
+		<Key ID="STR_ire_mod_medical_treatmentHint_Diagnosing">
+			<English>%1 is diagnosing</English>
+			<Russian>%1 проводит диагностику</Russian>
+		</Key>
+		<Key ID="STR_ire_mod_medical_treatmentHint_CheckingResponse">
+			<English>%1 is checking response</English>
+			<Russian>%1 проверяет реакцию</Russian>
+		</Key>
+		<Key ID="STR_ire_mod_medical_treatmentHint_CheckingPulse">
+			<English>%1: %2 is checking pulse</English>
+			<Russian>%1: %2 проверяет пульс</Russian>
+		</Key>
+		<Key ID="STR_ire_mod_medical_treatmentHint_CheckingBloodPressure">
+			<English>%1: %2 is checking blood pressure</English>
+			<Russian>%1: %2 проверяет давление</Russian>
+		</Key>
+		<Key ID="STR_ire_mod_medical_treatmentHint_Patching">
+			<English>%1: %2 is patching wounds</English>
+			<Russian>%1: %2 заштопывает раны</Russian>
+		</Key>
 		<Key ID="STR_ire_mod_medical_treatmentHint_Administering">
 			<English>%1: %2 is administering %3</English>
 			<Russian>%1: %2 применяет %3</Russian>

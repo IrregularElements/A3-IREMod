@@ -13,21 +13,39 @@ if(_bodyPart == "Body") then {
 
 private _medicName = [_medic] call ace_common_fnc_getName;
 private _bodyPartName = localize (format ["STR_ACE_Medical_GUI_%1", _bodyPart]);
-private _treatmentName = "";
+private _treatmentHintString = "";
 
 switch(_className) do {
-		case "WoundPatching": {
-			_treatmentName = LLSTRING(settingWoundPatchingEnabled_DisplayName);
+		case "Diagnose": {
+			private _fmtString = LLSTRING(treatmentHint_Diagnosing);
+			_treatmentHintString = format [_fmtString, _medicName];
 		};
 
-		case "Diagnose";
-		case "CheckPulse";
-		case "CheckBloodPressure";
 		case "CheckResponse": {
-			_treatmentName = getText (configFile >> "ace_medical_treatment_actions" >> _className >> "displayName");
+			private _fmtString = LLSTRING(treatmentHint_CheckingResponse);
+			_treatmentHintString = format [_fmtString, _medicName];
 		};
 
-		default { _treatmentName = getText (configFile >> "CfgWeapons" >> _usedItem >> "displayName"); };
+		case "CheckPulse": {
+			private _fmtString = LLSTRING(treatmentHint_CheckingPulse);
+			_treatmentHintString = format [_fmtString, _bodyPartName, _medicName];
+		};
+
+		case "CheckBloodPressure": {
+			private _fmtString = LLSTRING(treatmentHint_CheckingBloodPressure);
+			_treatmentHintString = format [_fmtString, _bodyPartName, _medicName];
+		};
+
+		case "WoundPatching": {
+			private _fmtString = LLSTRING(treatmentHint_Patching);
+			_treatmentHintString = format [_fmtString, _bodyPartName, _medicName];
+		};
+
+		default {
+			private _treatmentName = getText (configFile >> "CfgWeapons" >> _usedItem >> "displayName");
+			private _fmtString = LLSTRING(treatmentHint_Administering);
+			_treatmentHintString = format [_fmtString, _bodyPartName, _medicName, _treatmentName];
+		};
 };
 
-format [LLSTRING(treatmentHint_Administering), _bodyPartName, _medicName, _treatmentName];
+_treatmentHintString;

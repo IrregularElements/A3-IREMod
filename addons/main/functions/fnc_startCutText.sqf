@@ -51,7 +51,7 @@ private _handle = [{
 	params ["_args", "_handle"];
 	_args params ["_layer", "_text", "_speed", "_showInMap", "_isStructuredText"];
 	private _lines = count (_text splitString "\n") + 1;
-	for "_i" from 1 to (VERTICAL_OFFSET + _lines) do {
+	for "_i" from 1 to (VERTICAL_OFFSET + _lines / 2) do {
 		_text = "\n" + _text;
 	};
 	_layer cutText [_text, "PLAIN NOFADE", 0, _showInMap, _isStructuredText];

@@ -1,13 +1,21 @@
 #include "script_component.hpp"
 
-[QGVAR(patchWoundLocal), LINKFUNC(patchWoundLocal)] call CBA_fnc_addEventHandler;
+private _displayNewTreatmentHintCode = {
+	if(GVAR(treatmentHintsEnabled)) then {
+		[] call FUNC(displayTreatmentHints);
+	};
+};
 
+
+[QGVAR(patchWoundLocal), LINKFUNC(patchWoundLocal)] call CBA_fnc_addEventHandler;
 
 GVAR(epinephrineEH) = [QGVAR(epinephrine), LINKFUNC(handleEpinephrine)] call CBA_fnc_addEventHandler;
 
 GVAR(addTreatmentHintEH) = [QGVAR(addTreatmentHint), LINKFUNC(addTreatmentHint)] call CBA_fnc_addEventHandler;
 
 GVAR(removeTreatmentHintEH) = [QGVAR(removeTreatmentHint), LINKFUNC(removeTreatmentHint)] call CBA_fnc_addEventHandler;
+GVAR(displayNewTreatmentHintsEH) = [QGVAR(displayNewTreatmentHint), _displayNewTreatmentHintCode] call CBA_fnc_addEventHandler;
+GVAR(displayTreatmentHintsEH) = [QGVAR(displayTreatmentHints), LINKFUNC(displayTreatmentHints)] call CBA_fnc_addEventHandler;
 
 
 TREATMENT_HINTS_LAYER_VAR = [TREATMENT_HINTS_LAYER_NAME] call BIS_fnc_rscLayer;
@@ -27,10 +35,7 @@ GVAR(treatmentStartedEH) = ["ace_treatmentStarted", {
 	params ["_medic", "_patient", "_bodyPart", "_classname", "_itemUser", "_usedItem"];
 
 	[QGVAR(addTreatmentHint), _this, _patient] call CBA_fnc_targetEvent;
-
-	if(GVAR(treatmentHintsEnabled)) then {
-		[] call FUNC(displayTreatmentHints);
-	};
+	[QGVAR(displayNewTreatmentHint), [], _patient] call CBA_fnc_targetEvent;
 }] call CBA_fnc_addEventHandler;
 
 GVAR(treatmentFailedEH) = ["ace_treatmentFailed", {
@@ -38,7 +43,7 @@ GVAR(treatmentFailedEH) = ["ace_treatmentFailed", {
 
 	[QGVAR(removeTreatmentHint), _this, _patient] call CBA_fnc_targetEvent;
 
-	[] call FUNC(displayTreatmentHints);
+	[QGVAR(displayTreatmentHints), [], _patient] call CBA_fnc_targetEvent;
 }] call CBA_fnc_addEventHandler;
 
 GVAR(treatmentSucceededEH) = ["ace_treatmentSucceded", {
@@ -48,5 +53,5 @@ GVAR(treatmentSucceededEH) = ["ace_treatmentSucceded", {
 
 	[QGVAR(removeTreatmentHint), _this, _patient] call CBA_fnc_targetEvent;
 
-	[] call FUNC(displayTreatmentHints);
+	[QGVAR(displayTreatmentHints), [], _patient] call CBA_fnc_targetEvent;
 }] call CBA_fnc_addEventHandler;

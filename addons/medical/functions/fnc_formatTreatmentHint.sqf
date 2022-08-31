@@ -41,6 +41,21 @@ switch(_className) do {
 			_treatmentHintString = format [_fmtString, _bodyPartName, _medicName];
 		};
 
+		case "ApplyTourniquet": {
+			private _fmtString = LLSTRING(treatmentHint_ApplyingTourniquet);
+			_treatmentHintString = format [_fmtString, _bodyPartName, _medicName];
+		};
+
+		case "RemoveTourniquet": {
+			private _fmtString = LLSTRING(treatmentHint_RemovingTourniquet);
+			_treatmentHintString = format [_fmtString, _bodyPartName, _medicName];
+		};
+
+		case "Splint": {
+			private _fmtString = LLSTRING(treatmentHint_ApplyingSplint);
+			_treatmentHintString = format [_fmtString, _bodyPartName, _medicName];
+		};
+
 		default {
 			private _treatmentName = getText (configFile >> "CfgWeapons" >> _usedItem >> "displayName");
 			private _fmtString = LLSTRING(treatmentHint_Administering);

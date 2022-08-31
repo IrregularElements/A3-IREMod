@@ -34,6 +34,18 @@
 			<English>%1: %2 is checking blood pressure</English>
 			<Russian>%1: %2 проверяет давление</Russian>
 		</Key>
+		<Key ID="STR_ire_mod_medical_treatmentHint_ApplyingTourniquet">
+			<English>%1: %2 is applying tourniquet</English>
+			<Russian>%1: %2 накладывает жгут</Russian>
+		</Key>
+		<Key ID="STR_ire_mod_medical_treatmentHint_RemovingTourniquet">
+			<English>%1: %2 is removing tourniquet</English>
+			<Russian>%1: %2 снимает жгут</Russian>
+		</Key>
+		<Key ID="STR_ire_mod_medical_treatmentHint_ApplyingSplint">
+			<English>%1: %2 is applying splint</English>
+			<Russian>%1: %2 накладывает шину</Russian>
+		</Key>
 		<Key ID="STR_ire_mod_medical_treatmentHint_Patching">
 			<English>%1: %2 is patching wounds</English>
 			<Russian>%1: %2 заштопывает раны</Russian>

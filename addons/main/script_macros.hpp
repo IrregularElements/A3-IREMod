@@ -136,4 +136,9 @@
 
 #define ZEUS_ACTION_CONDITION ([_target, {QUOTE(QUOTE(ADDON)) in curatorAddons _this}, missionNamespace, QUOTE(QGVAR(zeusCheck)), 1E11, 'ace_interactMenuClosed'] call EFUNC(common,cachedCall))
 
+#define VAR_CUTTEXTREFRESHHANDLES QEGVAR(main,cutTextRefreshHandles)
+
+#define IRE_MOD_IDC_BASE          69420 // Surely this has not been taken yet
+#define IRE_MOD_UI_TERRAINNAME    69421
+
 #include "script_debug.hpp"

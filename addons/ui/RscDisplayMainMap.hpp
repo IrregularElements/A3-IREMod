@@ -1,5 +1,3 @@
-#include "\x\ire_mod\addons\main\script_macros_id.hpp"
-
 class RscText;
 class RscDisplayMainMap {
 	class controls {

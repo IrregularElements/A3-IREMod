@@ -1,1 +1,0 @@
-#define VAR_CUTTEXTREFRESHHANDLES QEGVAR(main,cutTextRefreshHandles)

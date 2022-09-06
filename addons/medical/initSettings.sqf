@@ -3,7 +3,7 @@
 	"CHECKBOX",
 	[LSTRING(settingAssistHintsEnabled_DisplayName), LSTRING(settingAssistHintsEnabled_Description)],
 	[ELSTRING(main,settingsCategory), LSTRING(settingsSubcategory)],
-	CBA_CHECKBOX_OFF,
+	CBA_CHECKBOX_ON,
 	CBA_SETTING_SERVER,
 	{
 		if(GVAR(treatmentHintsEnabled)) then {
@@ -20,7 +20,7 @@
 	"CHECKBOX",
 	[LSTRING(settingWoundPatchingEnabled_DisplayName), LSTRING(settingWoundPatchingEnabled_Description)],
 	[ELSTRING(main,settingsCategory), LSTRING(settingsSubcategory)],
-	CBA_CHECKBOX_OFF,
+	CBA_CHECKBOX_ON,
 	CBA_SETTING_SERVER
 ] call CBA_fnc_addSetting;
 
@@ -38,7 +38,7 @@
 	"CHECKBOX",
 	[LSTRING(settingEpiBonusEnabled_DisplayName), LSTRING(settingEpiBonusEnabled_Description)],
 	[ELSTRING(main,settingsCategory), LSTRING(settingsSubcategory)],
-	CBA_CHECKBOX_OFF,
+	CBA_CHECKBOX_ON,
 	CBA_SETTING_SERVER
 ] call CBA_fnc_addSetting;
 

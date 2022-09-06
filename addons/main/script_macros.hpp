@@ -141,4 +141,11 @@
 #define IRE_MOD_IDC_BASE          69420 // Surely this has not been taken yet
 #define IRE_MOD_UI_TERRAINNAME    69421
 
+#define CBA_CHECKBOX_OFF false
+#define CBA_CHECKBOX_ON  true
+
+#define CBA_SETTING_CLIENT 0
+#define CBA_SETTING_SERVER 1
+#define CBA_SETTING_FORCED 2
+
 #include "script_debug.hpp"

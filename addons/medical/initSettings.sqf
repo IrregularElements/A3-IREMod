@@ -3,8 +3,8 @@
 	"CHECKBOX",
 	[LSTRING(settingAssistHintsEnabled_DisplayName), LSTRING(settingAssistHintsEnabled_Description)],
 	[ELSTRING(main,settingsCategory), LSTRING(settingsSubcategory)],
-	false,
-	true,
+	CBA_CHECKBOX_OFF,
+	CBA_SETTING_SERVER,
 	{
 		if(GVAR(treatmentHintsEnabled)) then {
 			[] call FUNC(displayTreatmentHints);
@@ -20,8 +20,8 @@
 	"CHECKBOX",
 	[LSTRING(settingWoundPatchingEnabled_DisplayName), LSTRING(settingWoundPatchingEnabled_Description)],
 	[ELSTRING(main,settingsCategory), LSTRING(settingsSubcategory)],
-	false,
-	true
+	CBA_CHECKBOX_OFF,
+	CBA_SETTING_SERVER
 ] call CBA_fnc_addSetting;
 
 [
@@ -38,8 +38,8 @@
 	"CHECKBOX",
 	[LSTRING(settingEpiBonusEnabled_DisplayName), LSTRING(settingEpiBonusEnabled_Description)],
 	[ELSTRING(main,settingsCategory), LSTRING(settingsSubcategory)],
-	false,
-	true
+	CBA_CHECKBOX_OFF,
+	CBA_SETTING_SERVER
 ] call CBA_fnc_addSetting;
 
 [
@@ -48,7 +48,7 @@
 	[LSTRING(settingEpiBonusProbability_DisplayName), LSTRING(settingEpiBonusProbability_Description)],
 	[ELSTRING(main,settingsCategory), LSTRING(settingsSubcategory)],
 	[0, 1, 1, 2, true],
-	true
+	CBA_SETTING_SERVER
 ] call CBA_fnc_addSetting;
 
 [
@@ -57,7 +57,7 @@
 	LSTRING(settingEpiBonusDuration_DisplayName),
 	[ELSTRING(main,settingsCategory), LSTRING(settingsSubcategory)],
 	[0, 120, 30],
-	true
+	CBA_SETTING_SERVER
 ] call CBA_fnc_addSetting;
 
 [
@@ -66,5 +66,5 @@
 	[LSTRING(settingEpiBonusCooldown_DisplayName), LSTRING(settingEpiBonusCooldown_Description)],
 	[ELSTRING(main,settingsCategory), LSTRING(settingsSubcategory)],
 	[0, 600, 120],
-	true
+	CBA_SETTING_SERVER
 ] call CBA_fnc_addSetting;

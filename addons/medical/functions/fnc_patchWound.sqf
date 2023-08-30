@@ -2,6 +2,8 @@
 
 params ["_medic", "_patient", "_bodyPart", "_classname"];
 
+if(!isClass(configFile >> "CfgPatches" >> "ace_medical")) exitWith { false; };
+
 [_patient, "activity", LSTRING(activityPatchedPatient), [[_medic, false, true] call ace_common_fnc_getName]] call ace_medical_treatment_fnc_addToLog;
 
 [QGVAR(patchWoundLocal), [_patient, _bodyPart, _classname], _patient] call CBA_fnc_targetEvent;

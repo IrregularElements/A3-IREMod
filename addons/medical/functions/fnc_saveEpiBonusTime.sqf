@@ -6,6 +6,7 @@ params ["_patient"];
 
 if(!(_patient isKindOf "CAManBase")) exitWith { false; };
 if(!(alive _patient)) exitWith { false; };
+if(!isClass(configFile >> "CfgPatches" >> "ace_medical")) exitWith { false; };
 
 private _isUnconscious = _patient getVariable ["ACE_isUnconscious", false];
 private _isInCardiacArrest = IN_CRDC_ARRST(_patient);

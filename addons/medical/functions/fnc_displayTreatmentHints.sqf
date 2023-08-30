@@ -2,6 +2,8 @@
 
 params [["_hints", (ACE_player getVariable [VAR_TREATMENT_HINTS, []])]];
 
+if(!isClass(configFile >> "CfgPatches" >> "ace_medical")) exitWith { false; };
+
 if(count _hints == 0) exitWith {
 	[TREATMENT_HINTS_LAYER_VAR, 1] call EFUNC(main,stopCutText);
 	true;

@@ -23,6 +23,7 @@ params ["_patient", ["_duration", GVAR(epiBonusDuration)]];
 
 if(!(_patient isKindOf "CAManBase")) exitWith { false; };
 if(!(alive _patient)) exitWith { false; };
+if(!isClass(configFile >> "CfgPatches" >> "ace_medical")) exitWith { false; };
 
 _patient setVariable [VAR_IS_FORCED_CONSCIOUS, true];
 [_patient, false] call ace_medical_status_fnc_setCardiacArrestState;

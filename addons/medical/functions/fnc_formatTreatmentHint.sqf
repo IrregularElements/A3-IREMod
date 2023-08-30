@@ -9,6 +9,8 @@ if(IS_UNCONSCIOUS(ACE_player)) exitWith {
 	format [LLSTRING(treatmentHint_Unconscious)];
 };
 
+if(!isClass(configFile >> "CfgPatches" >> "ace_medical")) exitWith { false; };
+
 if(_bodyPart == "Body") then {
 	_bodyPart = "Torso";
 };

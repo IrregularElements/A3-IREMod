@@ -1,6 +1,6 @@
 class RscText;
 class RscDisplayMainMap {
-	class controls {
+	class Controls {
 		class GVAR(terrainName) : RscText {
 			idc = IRE_MOD_UI_TERRAINNAME;
 			text = "";

@@ -1,4 +1,6 @@
 #include "script_component.hpp"
+#define VAR_CRDC_ARRST        "ace_medical_inCardiacArrest"
+#define IN_CRDC_ARRST(unit)         (unit getVariable [VAR_CRDC_ARRST, false])
 
 params ["_patient"];
 
@@ -8,7 +10,7 @@ if(!(alive _patient)) exitWith { false; };
 private _isUnconscious = _patient getVariable ["ACE_isUnconscious", false];
 private _isInCardiacArrest = IN_CRDC_ARRST(_patient);
 
-TRACE_2(_isUnconscious, _isInCardiacArrest);
+TRACE_2("saveEpiBonusTime",_isUnconscious, _isInCardiacArrest);
 
 private _epiBonusSaved = [_isUnconscious, _isInCardiacArrest];
 

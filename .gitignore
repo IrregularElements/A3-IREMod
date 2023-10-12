@@ -5,6 +5,7 @@ releases/*
 extensions/vcproj32/*
 extensions/vcproj64/*
 .vscode/*
+.hemttout/
 hemtt
 hemtt.exe
 tools/temp

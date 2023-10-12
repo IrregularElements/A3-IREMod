@@ -1,0 +1,15 @@
+name = "IRE Mod"
+prefix = "ire_mod"
+author = "tsar_bimbo"
+mainprefix = "x"
+
+[files]
+include = [
+	"README.md",
+	"mod.cpp",
+	"logo_ire_mod_ca.paa",
+]
+
+[asc]
+enabled = true
+exclude = ["initSettings.sqf"]

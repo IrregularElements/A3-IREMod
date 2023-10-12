@@ -4,13 +4,13 @@ class ace_medical_treatment_actions {
 		displayName = CSTRING(actionWoundPatching);
 		displayNameProgress = CSTRING(actionWoundPatchingProgress);
 
-        consumeItem = 0;
-        items[] = {};
+		consumeItem = 0;
+		items[] = {};
 
-        condition = QFUNC(canPatchWounds);
-        treatmentTime = QFUNC(getWoundPatchingTime);
-        callbackSuccess = QFUNC(patchWound);
+		condition = QFUNC(canPatchWounds);
+		treatmentTime = QFUNC(getWoundPatchingTime);
+		callbackSuccess = QFUNC(patchWound);
 
-        litter[] = {};
-    };
+		litter[] = {};
+	};
 };

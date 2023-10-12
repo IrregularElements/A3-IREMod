@@ -1,32 +1,24 @@
 // Shim "Unconscious" and "CardiacArrest" transitions with an isForcedConscious check
 class ACE_Medical_StateMachine {
-    class Default;
-    class Default {
-        class CriticalInjuryOrVitals;
-        class CriticalInjuryOrVitals {
+	class Default {
+		class CriticalInjuryOrVitals {
 			condition = QUOTE(!([_this] call FUNC(isForcedConscious)));
-        };
-		class FatalVitals;
-		class FatalVitals {
-            condition = QUOTE(!([_this] call FUNC(isForcedConscious)));
 		};
-    };
-
-    class Injured;
-    class Injured {
-        class CriticalInjuryOrVitals;
-        class CriticalInjuryOrVitals {
-			condition = QUOTE(!([_this] call FUNC(isForcedConscious)));
-        };
-		class FatalVitals;
 		class FatalVitals {
 			condition = QUOTE(!([_this] call FUNC(isForcedConscious)));
 		};
-    };
+	};
 
-	class Unconscious;
+	class Injured {
+		class CriticalInjuryOrVitals {
+			condition = QUOTE(!([_this] call FUNC(isForcedConscious)));
+		};
+		class FatalVitals {
+			condition = QUOTE(!([_this] call FUNC(isForcedConscious)));
+		};
+	};
+
 	class Unconscious {
-		class FatalTransitions;
 		class FatalTransitions {
 			condition = QUOTE(!([_this] call FUNC(isForcedConscious)));
 		};

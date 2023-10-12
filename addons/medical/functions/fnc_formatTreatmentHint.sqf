@@ -1,4 +1,6 @@
 #include "script_component.hpp"
+#define VAR_UNCON             "ACE_isUnconscious"
+#define IS_UNCONSCIOUS(unit)        (unit getVariable [VAR_UNCON, false])
 
 params ["_hint"];
 _hint params ["_medic", "_bodyPart", "_className", "_usedItem", ""];

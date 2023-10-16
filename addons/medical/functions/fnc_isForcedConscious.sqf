@@ -9,6 +9,7 @@ params ["_patient"];
 
 if(!(_patient isKindOf "CAManBase")) exitWith { false; };
 if(!(alive _patient)) exitWith { false; };
+if(!isClass(configFile >> "CfgPatches" >> "ace_medical")) exitWith { false; };
 
 private _veryLargeBloodLoss = (GET_BLOOD_VOLUME(_patient) < BLOOD_VOLUME_CLASS_4_HEMORRHAGE);
 private _inVeryCriticalCondition = _veryLargeBloodLoss;

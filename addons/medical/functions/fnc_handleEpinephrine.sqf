@@ -5,6 +5,8 @@ params ["_medic", "_patient", "_bodyPart", "_classname"];
 if(!GVAR(epiBonusEnabled) || (GVAR(epiBonusDuration) <= 0)) exitWith { false; };
 if((toUpper _classname) != "EPINEPHRINE") exitWith { false; };
 
+if(!isClass(configFile >> "CfgPatches" >> "ace_medical")) exitWith { false; };
+
 private _hasTourniquet = [_patient, _bodyPart] call ace_medical_treatment_fnc_hasTourniquetAppliedTo;
 if(_hasTourniquet) exitWith {
 	false;

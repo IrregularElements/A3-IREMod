@@ -4,6 +4,7 @@ params ["_patient"];
 
 if(!(_patient isKindOf "CAManBase")) exitWith { false; };
 if(!(alive _patient)) exitWith { false; };
+if(!isClass(configFile >> "CfgPatches" >> "ace_medical")) exitWith { false; };
 
 private _lastEpiBonusSaved = _patient getVariable [VAR_ACTIVE_EPI_BONUS_SAVED, nil];
 if(isNil "_lastEpiBonusSaved") exitWith { false; };

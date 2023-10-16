@@ -3,6 +3,7 @@
 params ["_medic", "_patient", "_bodyPart", "_bandage"];
 
 if(!GVAR(woundPatchingEnabled)) exitWith { false; };
+if(!isClass(configFile >> "CfgPatches" >> "ace_medical")) exitWith { false; };
 
 private _canBandage = _this call ace_medical_treatment_fnc_canBandage;
 if(!_canBandage) exitWith { false; };
